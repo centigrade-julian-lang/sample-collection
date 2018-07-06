@@ -9,7 +9,9 @@ addons:
 
 before_script:
   - npm install -g @angular/cli
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9876 http://localhost
+  - apt install xvfb
+  - xvfb -ac :0 -screen 0 1280x1024x16
+  - google-chrome-stable --headless --disable-gpu --no-sandbox --remote-debugging-port=9876 http://localhost
 
 cache:
   npm: true
