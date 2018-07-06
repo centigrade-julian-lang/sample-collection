@@ -9,7 +9,6 @@ addons:
 
 before_script:
   - npm install -g @angular/cli
-  - google-chrome-stable --headless --disable-gpu --no-sandbox --remote-debugging-port=9876 http://localhost
 
 cache:
   npm: true
@@ -17,7 +16,7 @@ cache:
     - node_modules
 
 script:
-  - ng lint
+  - npm run lint
   - ng test
   - ng build --prod
 
