@@ -26,3 +26,7 @@ deploy:
   github-token: $GITHUB_TOKEN
   keep-history: true
   local-dir: ./dist/
+
+notifications:
+  webhooks: http://192.168.32.195:4480/spec/finished
+  on_success: always
